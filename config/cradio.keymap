@@ -49,12 +49,19 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <2 1>;
+            if-layers = <1 2>;
             then-layer = <3>;
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        alt_tab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <0 31>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -64,7 +71,16 @@
 &ht ESCAPE Q        &kp W  &kp E  &kp R        &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P
 &ht LEFT_SHIFT A    &kp S  &kp D  &kp F        &kp G        &kp H      &kp J        &kp K      &kp L    &ht RIGHT_SHIFT BACKSPACE
 &ht LEFT_CONTROL Z  &kp X  &kp C  &kp V        &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &ht RIGHT_CONTROL SLASH
-                                  &lt 2 SPACE  &kp SPACE    &kp ENTER  &lt 1 SPACE
+                                  &lt 1 SPACE  &kp SPACE    &kp ENTER  &lt 2 SPACE
+            >;
+        };
+
+        right_layer {
+            bindings = <
+&kp N1            &kp N2          &kp N3     &kp N4   &kp N5           &kp N6          &kp N7          &kp N8          &kp N9           &kp N0
+&kp DEL           &kp CAPS        &kp PSCRN  &kp TAB  &kp BACKSPACE    &kp RIGHT_ALT   &kp HOME        &kp UP          &kp END          &kp SEMICOLON
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &tog 4   &kp LEFT_META    &kp RIGHT_META  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+                                             &trans   &kp ESC          &trans          &trans
             >;
         };
 
@@ -77,21 +93,32 @@
             >;
         };
 
-        right_layer {
-            bindings = <
-&kp N1            &kp N2          &kp N3     &kp N4   &kp N5           &kp N6          &kp N7          &kp N8          &kp N9           &kp N0
-&kp DEL           &kp CAPS        &kp PSCRN  &kp TAB  &kp BACKSPACE    &kp RIGHT_ALT   &kp HOME        &kp UP          &kp END          &kp SEMICOLON
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans   &kp LEFT_META    &kp RIGHT_META  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-                                             &trans   &kp ESC          &trans          &trans
-            >;
-        };
-
         tri_layer {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG  &trans          &kp C_MUTE    &kp C_PREV
 &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &none         &studio_unlock  &kp C_VOL_UP  &kp C_PP
 &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &none         &trans          &kp C_VOL_DN  &kp C_NEXT
                           &trans   &trans          &trans        &trans
+            >;
+        };
+
+        layer_game {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &mo 5   &trans    &trans  &trans
+            >;
+
+            label = "layer_game";
+        };
+
+        layer_game_alt {
+            bindings = <
+&kp GRAVE  &kp ESCAPE  &kp F2          &trans           &to 0     &trans  &trans  &trans  &trans  &trans
+&trans     &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans    &trans  &trans  &trans  &trans  &trans
+&trans     &trans      &trans          &trans           &trans    &trans  &trans  &trans  &trans  &trans
+                                       &trans           &trans    &trans  &trans
             >;
         };
     };
