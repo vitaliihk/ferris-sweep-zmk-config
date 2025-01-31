@@ -61,19 +61,19 @@
 
         default_layer {
             bindings = <
-&ht ESCAPE Q        &kp W       &kp E        &kp R       &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P
-&ht LEFT_SHIFT A    &ht LALT S  &ht LCTRL D  &ht LGUI F  &kp G        &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &ht RIGHT_SHIFT BACKSPACE
-&ht LEFT_CONTROL Z  &kp X       &kp C        &kp V       &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &ht RIGHT_CONTROL SLASH
-                                             &lt 2 TAB   &kp SPACE    &kp ENTER  &lt 1 SPACE
+&ht ESCAPE Q        &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P
+&ht LEFT_SHIFT A    &ht LALT S  &ht LCTRL D  &ht LGUI F   &kp G        &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &ht RIGHT_SHIFT BACKSPACE
+&ht LEFT_CONTROL Z  &kp X       &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &ht RIGHT_CONTROL SLASH
+                                             &lt 2 SPACE  &kp SPACE    &kp ENTER  &lt 1 SPACE
             >;
         };
 
         right_layer {
             bindings = <
-&kp N1            &kp N2          &kp N3     &kp N4   &kp N5           &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
-&kp DEL           &kp CAPS        &kp PSCRN  &kp INS  &kp BACKSPACE    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SEMICOLON
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans   &trans           &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &bootloader
-                                             &trans   &kp ESC          &trans    &trans
+&kp N1            &kp N2          &kp N3     &kp N4   &kp N5           &kp N6  &kp N7    &kp N8          &kp N9     &kp N0
+&kp DEL           &kp CAPS        &kp PSCRN  &kp TAB  &kp BACKSPACE    &trans  &kp LEFT  &kp UP          &kp RIGHT  &kp SEMICOLON
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans   &trans           &trans  &kp HOME  &kp DOWN_ARROW  &kp END    &trans
+                                             &trans   &kp ESC          &trans  &trans
             >;
         };
 
