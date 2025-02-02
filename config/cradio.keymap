@@ -61,18 +61,18 @@
 
         default_layer {
             bindings = <
-&ht ESCAPE Q        &kp W  &kp E  &kp R      &kp T        &kp Y               &kp U        &kp I      &kp O    &kp P
-&ht LEFT_SHIFT A    &kp S  &kp D  &kp F      &kp G        &kp H               &kp J        &kp K      &kp L    &ht RIGHT_SHIFT BACKSPACE
-&ht LEFT_CONTROL Z  &kp X  &kp C  &kp V      &kp B        &kp N               &kp M        &kp COMMA  &kp DOT  &ht RIGHT_CONTROL SLASH
-                                  &lt 1 TAB  &kp SPACE    &ht LEFT_ALT ENTER  &lt 2 SPACE
+&kp Q               &kp W  &kp E  &kp R  &kp T        &kp Y               &kp U  &kp I      &kp O    &kp P
+&ht LEFT_SHIFT A    &kp S  &kp D  &kp F  &kp G        &kp H               &kp J  &kp K      &kp L    &ht RIGHT_SHIFT BACKSPACE
+&ht LEFT_CONTROL Z  &kp X  &kp C  &kp V  &kp B        &kp N               &kp M  &kp COMMA  &kp DOT  &ht RIGHT_CONTROL SLASH
+                                  &mo 1  &kp SPACE    &ht LEFT_ALT ENTER  &mo 2
             >;
         };
 
         left_layer {
             bindings = <
 &kp EXCL  &kp AT            &kp HASH           &kp DLLR        &kp PRCNT                &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
-&trans    &kp LBKT          &kp RIGHT_BRACKET  &kp LPAR        &kp RIGHT_PARENTHESIS    &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
-&kp TAB   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE          &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
+&kp TAB   &kp LBKT          &kp RIGHT_BRACKET  &kp LPAR        &kp RIGHT_PARENTHESIS    &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
+&trans    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp RIGHT_BRACE          &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
                                                &trans          &trans                   &trans     &trans
             >;
         };
@@ -88,10 +88,10 @@
 
         tri_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG  &trans          &kp C_MUTE    &kp C_PREV
-&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &none         &studio_unlock  &kp C_VOL_UP  &kp C_PP
-&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &none         &trans          &kp C_VOL_DN  &kp C_NEXT
-                          &trans   &trans          &trans        &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans    &bt BT_CLR_ALL  &out OUT_TOG  &trans  &kp C_MUTE    &kp C_PREV
+&kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans          &none         &trans  &kp C_VOL_UP  &kp C_PP
+&kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans          &none         &trans  &kp C_VOL_DN  &kp C_NEXT
+                          &trans   &trans    &trans          &trans
             >;
         };
     };
